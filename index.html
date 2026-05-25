@@ -674,7 +674,7 @@ async function submitBooking() {
     let success = true;
     let errorMsg = null;
 
-    if (CFG.SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycby5s7uh1ykYuvMSV4BAL4YB6EJTOn5eCveY0GB3AQVKukmEnLkQEV7a9h5IXNirRM2p/exec') {
+    if (CFG.SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbwQfkmP989wF1xCgiTojbwKnoX98HHV_EP7wuRkOXoa8OuMv3_DUurGyrQG_5wpTyJS/exec') {
       const res  = await fetch(CFG.SCRIPT_URL, { method:'POST', body: JSON.stringify(payload) });
       const data = await res.json();
       if (!data.success) { success = false; errorMsg = data.error; }
