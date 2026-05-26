@@ -15,8 +15,6 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);min-height:100vh;-webkit-font-smoothing:antialiased}
-
-/* HEADER */
 .header{background:var(--black);border-bottom:2px solid var(--red);padding:14px 20px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:200}
 .logo{width:46px;height:46px;border-radius:50%;border:2px solid var(--red);object-fit:cover;flex-shrink:0}
 .hinfo h1{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:3px;color:var(--white)}
@@ -26,25 +24,17 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
 .tab-btn.patient{background:var(--red);color:var(--white);border-color:var(--red)}
 .tab-btn.admin{background:transparent;color:var(--gray);border-color:var(--border2)}
 .tab-btn.admin:hover{border-color:var(--gray);color:var(--white)}
-
-/* VIEWS */
-.view{display:none}
-.view.active{display:block}
-
-/* ── PATIENT VIEW ── */
+.view{display:none}.view.active{display:block}
 .page{max-width:480px;margin:0 auto;padding:24px 16px 60px}
 .steps-bar{display:flex;gap:0;margin-bottom:28px;background:var(--surface);border-radius:8px;padding:3px;border:1px solid var(--border)}
 .step-item{flex:1;text-align:center;padding:8px 4px;border-radius:6px;font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:var(--gray2);transition:all .2s}
 .step-item .sn{display:block;font-family:'Bebas Neue',sans-serif;font-size:15px;margin-bottom:1px}
 .step-item.active{background:var(--red);color:var(--white)}
 .step-item.done{color:var(--gray)}
-.panel{display:none;animation:fadeUp .25s ease}
-.panel.active{display:block}
+.panel{display:none;animation:fadeUp .25s ease}.panel.active{display:block}
 @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .section-title{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:3px;margin-bottom:4px}
 .section-sub{color:var(--gray);font-size:13px;margin-bottom:20px}
-
-/* Calendar */
 .cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
 .cal-month{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
 .nav-btn{width:36px;height:36px;border-radius:50%;background:var(--surface);border:1px solid var(--border2);color:var(--white);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
@@ -57,14 +47,11 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
 .dc.avail{background:var(--surface);border-color:var(--border2);cursor:pointer}
 .dc.avail:hover{background:var(--red-dim);border-color:var(--red);color:var(--red)}
 .dc.busy{background:#0f0000;color:#2a0008}
-.dc.past{opacity:.2}
-.dc.sel{background:var(--red)!important;border-color:var(--red)!important;color:#fff!important}
+.dc.past{opacity:.2}.dc.sel{background:var(--red)!important;border-color:var(--red)!important;color:#fff!important}
 .dc.today{border-color:#444}
 .legend{display:flex;gap:12px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);flex-wrap:wrap}
 .leg{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--gray)}
 .leg-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
-
-/* Slots */
 .slots-header{background:var(--red-dim);border:1px solid var(--red);border-radius:8px;padding:12px 14px;margin-bottom:16px}
 .slots-date{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px}
 .slots-hint{font-size:11px;color:var(--red);margin-top:2px}
@@ -76,14 +63,11 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
 .slot .st{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;line-height:1}
 .slot .sa{font-size:9px;color:var(--gray);letter-spacing:1px;margin-top:2px;font-weight:700;text-transform:uppercase}
 .slot.sel .sa{color:rgba(255,255,255,.6)}
-
-/* Form */
 .summary-card{background:var(--surface);border:1px solid var(--red);border-radius:10px;padding:16px;margin-bottom:20px}
 .sum-label{font-size:9px;color:var(--red);letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
 .sum-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px}
 .sum-row:last-child{border-bottom:none}
-.sum-row span:first-child{color:var(--gray)}
-.sum-row span:last-child{font-weight:700}
+.sum-row span:first-child{color:var(--gray)}.sum-row span:last-child{font-weight:700}
 .form-field{margin-bottom:14px}
 .form-field label{display:block;font-size:10px;color:var(--gray);letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:7px}
 .form-field input,.form-field select{width:100%;background:var(--surface);border:1px solid var(--border2);border-radius:8px;color:var(--white);padding:12px 14px;font-size:14px;font-family:'Barlow',sans-serif;outline:none;transition:border-color .2s;appearance:none}
@@ -107,8 +91,6 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
 .info-card p{font-size:12px;color:var(--gray);line-height:1.6}
 .spinner{width:24px;height:24px;border-radius:50%;border:2px solid var(--border2);border-top-color:var(--red);animation:spin .7s linear infinite;margin:0 auto}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* ── ADMIN VIEW ── */
 .admin-wrap{max-width:900px;margin:0 auto;padding:24px 20px 60px}
 .admin-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px}
 .admin-header h2{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px}
@@ -120,17 +102,16 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
 .filter-btn{padding:7px 16px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s;border:1px solid var(--border2);background:transparent;color:var(--gray)}
 .filter-btn.active,.filter-btn:hover{background:var(--red);color:#fff;border-color:var(--red)}
 .appointments-list{display:flex;flex-direction:column;gap:8px}
-.appt-card{background:var(--surface);border:1px solid var(--border2);border-radius:10px;padding:16px;display:flex;align-items:center;gap:14px;transition:border-color .2s}
-.appt-card:hover{border-color:var(--border2)}
+.appt-card{background:var(--surface);border:1px solid var(--border2);border-radius:10px;padding:16px;display:flex;align-items:center;gap:14px;transition:border-color .2s;flex-wrap:wrap}
 .appt-date{background:var(--red);border-radius:8px;padding:8px 12px;text-align:center;flex-shrink:0;min-width:56px}
 .appt-date .ad-day{font-family:'Bebas Neue',sans-serif;font-size:24px;line-height:1;color:#fff}
 .appt-date .ad-mon{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.7);font-weight:700}
 .appt-info{flex:1;min-width:0}
 .appt-name{font-size:15px;font-weight:700;color:var(--white);margin-bottom:2px}
-.appt-meta{font-size:12px;color:var(--gray);display:flex;gap:12px;flex-wrap:wrap}
-.appt-type{font-size:11px;background:var(--red-dim);color:var(--red);border:1px solid var(--red);padding:2px 8px;border-radius:4px;font-weight:700;letter-spacing:.5px}
+.appt-meta{font-size:12px;color:var(--gray);display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.appt-type{font-size:11px;background:var(--red-dim);color:var(--red);border:1px solid var(--red);padding:2px 8px;border-radius:4px;font-weight:700;letter-spacing:.5px;display:inline-block;margin-top:6px}
 .appt-actions{display:flex;gap:6px;flex-shrink:0}
-.act-btn{padding:7px 12px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.5px;cursor:pointer;border:none;transition:all .2s}
+.act-btn{padding:7px 12px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;border:none;transition:all .2s;text-decoration:none;display:inline-block}
 .act-confirm{background:#0a2a0a;color:#4caf50;border:1px solid #1a4a1a}
 .act-confirm:hover{background:#1a4a1a}
 .act-delete{background:#1a0000;color:#ff4444;border:1px solid #3a0000}
@@ -141,12 +122,8 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
 .admin-pass h3{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;margin-bottom:8px}
 .admin-pass p{color:var(--gray);font-size:13px;margin-bottom:20px}
 .badge{display:inline-block;background:var(--red-dim);color:var(--red);border:1px solid var(--red);font-size:9px;font-weight:700;letter-spacing:1px;padding:2px 8px;border-radius:3px;margin-left:6px;text-transform:uppercase;vertical-align:middle}
-
-@media(max-width:480px){
-  .admin-stats{grid-template-columns:repeat(3,1fr)}
-  .appt-actions{flex-direction:column}
-  .header-right .tab-btn span{display:none}
-}
+.loading-overlay{position:fixed;inset:0;background:rgba(8,8,8,.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:999}
+.loading-overlay p{color:var(--gray);font-size:13px;letter-spacing:1px;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -158,12 +135,12 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
     <p>Jerson Torres · Nutrición y Salud</p>
   </div>
   <div class="header-right">
-    <button class="tab-btn patient active" onclick="showView('patient')">📅 <span>Agendar</span></button>
-    <button class="tab-btn admin" onclick="showAdminLogin()">🔒 <span>Admin</span></button>
+    <button class="tab-btn patient" onclick="showView('patient')">📅 Agendar</button>
+    <button class="tab-btn admin" onclick="showAdminLogin()">🔒 Admin</button>
   </div>
 </header>
 
-<!-- ══════════════ PATIENT VIEW ══════════════ -->
+<!-- PATIENT VIEW -->
 <div class="view active" id="viewPatient">
 <div class="page">
   <nav class="steps-bar">
@@ -172,8 +149,6 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
     <div class="step-item" id="stp3"><span class="sn">03</span>Datos</div>
     <div class="step-item" id="stp4"><span class="sn">04</span>Listo</div>
   </nav>
-
-  <!-- Panel 1: Calendario -->
   <section class="panel active" id="pan1">
     <h2 class="section-title">Elige una fecha</h2>
     <p class="section-sub">Selecciona un día disponible del mes</p>
@@ -193,8 +168,6 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
       <div class="leg"><div class="leg-dot" style="background:var(--red);"></div>Seleccionado</div>
     </div>
   </section>
-
-  <!-- Panel 2: Horarios -->
   <section class="panel" id="pan2">
     <h2 class="section-title">Elige tu horario</h2>
     <div class="slots-header">
@@ -204,8 +177,6 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
     <div class="slots-grid" id="slotsGrid"></div>
     <button class="btn-back" onclick="goTo(1)">← Cambiar fecha</button>
   </section>
-
-  <!-- Panel 3: Datos -->
   <section class="panel" id="pan3">
     <h2 class="section-title">Tus datos</h2>
     <p class="section-sub">Para confirmar tu cita</p>
@@ -215,14 +186,8 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
       <div class="sum-row"><span>Hora</span><span id="sumTime">—</span></div>
     </div>
     <div class="error-bar" id="formErr"></div>
-    <div class="form-field">
-      <label>Nombre completo</label>
-      <input type="text" id="fName" placeholder="Ej. María González">
-    </div>
-    <div class="form-field">
-      <label>WhatsApp</label>
-      <input type="tel" id="fPhone" placeholder="+52 55 1234 5678">
-    </div>
+    <div class="form-field"><label>Nombre completo</label><input type="text" id="fName" placeholder="Ej. María González"></div>
+    <div class="form-field"><label>WhatsApp</label><input type="tel" id="fPhone" placeholder="+52 55 1234 5678"></div>
     <div class="form-field">
       <label>Tipo de consulta</label>
       <select id="fType">
@@ -233,15 +198,10 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
         <option>Evaluación física</option>
       </select>
     </div>
-    <div class="form-field">
-      <label>Notas (opcional)</label>
-      <input type="text" id="fNotes" placeholder="Algo que deba saber...">
-    </div>
+    <div class="form-field"><label>Notas (opcional)</label><input type="text" id="fNotes" placeholder="Algo que deba saber..."></div>
     <button class="btn-primary" id="confirmBtn" onclick="submitBooking()">CONFIRMAR CITA →</button>
     <button class="btn-back" onclick="goTo(2)">← Cambiar horario</button>
   </section>
-
-  <!-- Panel 4: Confirmación -->
   <section class="panel" id="pan4">
     <div id="loadingView" style="text-align:center;padding:48px 0;">
       <div class="spinner"></div>
@@ -260,7 +220,7 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
       </div>
       <div class="info-card">
         <div class="ic-title">📋 ¿Qué sigue?</div>
-        <p>Jerson Torres revisará tu cita y se pondrá en contacto contigo por WhatsApp para confirmarla.</p>
+        <p>Jerson Torres revisará tu cita y te contactará por WhatsApp para confirmarla.</p>
       </div>
       <button class="btn-back" style="margin-top:16px;" onclick="resetBooking()">Agendar otra cita</button>
     </div>
@@ -274,65 +234,76 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
 </div>
 </div>
 
-<!-- ══════════════ ADMIN VIEW ══════════════ -->
+<!-- ADMIN VIEW -->
 <div class="view" id="viewAdmin">
-
-  <!-- Login -->
   <div id="adminLogin">
     <div class="admin-pass">
       <h3>Panel Admin</h3>
       <p>Ingresa tu contraseña para ver las citas</p>
-      <div class="form-field">
-        <input type="password" id="adminPwd" placeholder="Contraseña" onkeydown="if(event.key==='Enter')checkAdmin()">
-      </div>
+      <div class="form-field"><input type="password" id="adminPwd" placeholder="Contraseña" onkeydown="if(event.key==='Enter')checkAdmin()"></div>
       <button class="btn-primary" onclick="checkAdmin()">ENTRAR →</button>
       <p id="adminErr" style="color:#ff4444;font-size:12px;margin-top:10px;display:none;">Contraseña incorrecta</p>
       <button class="btn-back" style="margin-top:8px;" onclick="showView('patient')">← Volver</button>
     </div>
   </div>
-
-  <!-- Dashboard -->
   <div id="adminDash" style="display:none;">
-  <div class="admin-wrap">
-    <div class="admin-header">
-      <h2>Mis Citas <span class="badge">Admin</span></h2>
-      <button class="btn-back" style="width:auto;padding:8px 16px;" onclick="showView('patient')">← Salir</button>
+    <div class="admin-wrap">
+      <div class="admin-header">
+        <h2>Mis Citas <span class="badge">Admin</span></h2>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-back" style="width:auto;padding:8px 16px;" onclick="renderDashboard()">↻ Actualizar</button>
+          <button class="btn-back" style="width:auto;padding:8px 16px;" onclick="showView('patient')">← Salir</button>
+        </div>
+      </div>
+      <div class="admin-stats">
+        <div class="stat-card"><div class="snum" id="statTotal">0</div><div class="slabel">Total</div></div>
+        <div class="stat-card"><div class="snum" id="statToday">0</div><div class="slabel">Hoy</div></div>
+        <div class="stat-card"><div class="snum" id="statWeek">0</div><div class="slabel">Esta semana</div></div>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterAppts('all',this)">Todas</button>
+        <button class="filter-btn" onclick="filterAppts('today',this)">Hoy</button>
+        <button class="filter-btn" onclick="filterAppts('week',this)">Esta semana</button>
+        <button class="filter-btn" onclick="filterAppts('upcoming',this)">Próximas</button>
+      </div>
+      <div class="appointments-list" id="apptList"></div>
     </div>
-    <div class="admin-stats">
-      <div class="stat-card"><div class="snum" id="statTotal">0</div><div class="slabel">Total</div></div>
-      <div class="stat-card"><div class="snum" id="statToday">0</div><div class="slabel">Hoy</div></div>
-      <div class="stat-card"><div class="snum" id="statWeek">0</div><div class="slabel">Esta semana</div></div>
-    </div>
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterAppts('all',this)">Todas</button>
-      <button class="filter-btn" onclick="filterAppts('today',this)">Hoy</button>
-      <button class="filter-btn" onclick="filterAppts('week',this)">Esta semana</button>
-      <button class="filter-btn" onclick="filterAppts('upcoming',this)">Próximas</button>
-    </div>
-    <div class="appointments-list" id="apptList"></div>
   </div>
-  </div>
-
 </div>
 
 <script>
 // ══════════════════════════════════════════════════
 //  CONFIGURACIÓN
 // ══════════════════════════════════════════════════
-const ADMIN_PASSWORD = 'instinto2024'; // ← Cambia esto por tu contraseña
-const WORK_DAYS  = [1,2,3,4,5,6];     // 1=Lun...6=Sáb (0=Dom cerrado)
-const TIME_SLOTS = ['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00'];
+const ADMIN_PASSWORD = 'instinto2024';
+const STORAGE_KEY    = 'appointments';
+const SHARED         = true; // usa storage compartido entre dispositivos
 
+const WORK_DAYS  = [1,2,3,4,5,6];
+const TIME_SLOTS = ['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00'];
 const MONTHS_ES  = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 const DAYS_FULL  = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
-const DAYS_SHORT = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
 
-// ── STORAGE ──────────────────────────────────────
-function getAppointments() {
-  try { return JSON.parse(localStorage.getItem('id_appointments') || '[]'); } catch(e) { return []; }
+// ── STORAGE COMPARTIDO ────────────────────────────
+async function storageGet(key) {
+  try {
+    const r = await window.storage.get(key, SHARED);
+    return r ? JSON.parse(r.value) : null;
+  } catch(e) { return null; }
 }
-function saveAppointments(appts) {
-  localStorage.setItem('id_appointments', JSON.stringify(appts));
+async function storageSet(key, val) {
+  try {
+    await window.storage.set(key, JSON.stringify(val), SHARED);
+    return true;
+  } catch(e) { return false; }
+}
+
+async function getAppointments() {
+  const data = await storageGet(STORAGE_KEY);
+  return Array.isArray(data) ? data : [];
+}
+async function saveAppointments(appts) {
+  await storageSet(STORAGE_KEY, appts);
 }
 
 // ── ESTADO ───────────────────────────────────────
@@ -342,24 +313,21 @@ var S = {
   selDate: null, selTime: null, busyMap: {}
 };
 var TODAY = new Date(); TODAY.setHours(0,0,0,0);
+var currentFilter = 'all';
 
 // ── VISTAS ───────────────────────────────────────
 function showView(v) {
   document.getElementById('viewPatient').classList.toggle('active', v==='patient');
   document.getElementById('viewAdmin').classList.toggle('active', v==='admin');
-  document.querySelector('.tab-btn.patient').classList.toggle('active', v==='patient');
-  document.querySelector('.tab-btn.admin').classList.toggle('active', v==='admin');
+  document.querySelector('.tab-btn.patient').classList.toggle('patient', true);
 }
-
 function showAdminLogin() {
   showView('admin');
   document.getElementById('adminLogin').style.display='block';
   document.getElementById('adminDash').style.display='none';
 }
-
 function checkAdmin() {
-  var pwd = document.getElementById('adminPwd').value;
-  if(pwd === ADMIN_PASSWORD) {
+  if(document.getElementById('adminPwd').value === ADMIN_PASSWORD) {
     document.getElementById('adminLogin').style.display='none';
     document.getElementById('adminDash').style.display='block';
     renderDashboard();
@@ -368,11 +336,11 @@ function checkAdmin() {
   }
 }
 
-// ── NAVEGACIÓN PASOS ─────────────────────────────
+// ── PASOS ────────────────────────────────────────
 function goTo(step) {
   [1,2,3,4].forEach(function(n) {
     document.getElementById('pan'+n).classList.toggle('active', n===step);
-    var s = document.getElementById('stp'+n);
+    var s=document.getElementById('stp'+n);
     s.classList.remove('active','done');
     if(n<step) s.classList.add('done');
     if(n===step) s.classList.add('active');
@@ -381,19 +349,7 @@ function goTo(step) {
 }
 
 // ── CALENDARIO ───────────────────────────────────
-function dateKey(y,m,d) {
-  return y+'-'+String(m).padStart(2,'0')+'-'+String(d).padStart(2,'0');
-}
-
-function buildBusyMap() {
-  var appts = getAppointments();
-  var busy  = {};
-  appts.forEach(function(a) {
-    if(!busy[a.date]) busy[a.date]=[];
-    if(busy[a.date].indexOf(a.time)===-1) busy[a.date].push(a.time);
-  });
-  return busy;
-}
+function dateKey(y,m,d){return y+'-'+String(m).padStart(2,'0')+'-'+String(d).padStart(2,'0')}
 
 function changeMonth(dir) {
   S.month+=dir;
@@ -402,26 +358,33 @@ function changeMonth(dir) {
   renderCalendar();
 }
 
-function renderCalendar() {
-  S.busyMap = buildBusyMap();
-  var grid = document.getElementById('daysGrid');
-  document.getElementById('monthLabel').textContent = MONTHS_ES[S.month]+' '+S.year;
-  document.getElementById('prevBtn').disabled = (S.year===TODAY.getFullYear()&&S.month===TODAY.getMonth());
+async function renderCalendar() {
+  var grid=document.getElementById('daysGrid');
+  document.getElementById('monthLabel').textContent=MONTHS_ES[S.month]+' '+S.year;
+  document.getElementById('prevBtn').disabled=(S.year===TODAY.getFullYear()&&S.month===TODAY.getMonth());
+  grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:24px;"><div class="spinner"></div></div>';
 
-  var firstDay = new Date(S.year,S.month,1).getDay();
-  var totalDays = new Date(S.year,S.month+1,0).getDate();
+  var appts = await getAppointments();
+  S.busyMap={};
+  appts.forEach(function(a){
+    if(!S.busyMap[a.date]) S.busyMap[a.date]=[];
+    if(S.busyMap[a.date].indexOf(a.time)===-1) S.busyMap[a.date].push(a.time);
+  });
+
+  var firstDay=new Date(S.year,S.month,1).getDay();
+  var totalDays=new Date(S.year,S.month+1,0).getDate();
   var html='';
   for(var i=0;i<firstDay;i++) html+='<div class="dc"></div>';
-  for(var d=1;d<=totalDays;d++) {
-    var date = new Date(S.year,S.month,d);
-    var key  = dateKey(S.year,S.month+1,d);
-    var dow  = date.getDay();
-    var isPast = date<TODAY;
-    var isWknd = (dow===0);
-    var busyTimes = S.busyMap[key]||[];
-    var allBusy = busyTimes.length>=TIME_SLOTS.length;
-    var isSel = S.selDate===key;
-    var isToday = date.getTime()===TODAY.getTime();
+  for(var d=1;d<=totalDays;d++){
+    var date=new Date(S.year,S.month,d);
+    var key=dateKey(S.year,S.month+1,d);
+    var dow=date.getDay();
+    var isPast=date<TODAY;
+    var isWknd=(dow===0);
+    var busyTimes=S.busyMap[key]||[];
+    var allBusy=busyTimes.length>=TIME_SLOTS.length;
+    var isSel=S.selDate===key;
+    var isToday=date.getTime()===TODAY.getTime();
     var cls='dc'; var click='';
     if(isPast){cls+=' past';}
     else if(isWknd||allBusy){cls+=' busy';}
@@ -438,16 +401,13 @@ function renderCalendar() {
 
 function selectDate(key,day,dow) {
   S.selDate=key;
-  S.busyMap=buildBusyMap();
   document.querySelectorAll('.dc.avail').forEach(function(el){el.classList.remove('sel');});
   event.currentTarget.classList.add('sel');
-
   var m=parseInt(key.split('-')[1]);
   document.getElementById('slotsDateLabel').textContent=DAYS_FULL[dow]+', '+day+' de '+MONTHS_ES[m-1];
-
   var busyTimes=S.busyMap[key]||[];
   var html=''; var hasSlots=false;
-  TIME_SLOTS.forEach(function(t) {
+  TIME_SLOTS.forEach(function(t){
     var parts=t.split(':');
     var hr=parseInt(parts[0]);
     var ampm=hr>=12?'PM':'AM';
@@ -461,10 +421,10 @@ function selectDate(key,day,dow) {
       +'<div class="sa">'+ampm+(taken?' · Ocupado':'')+'</div></div>';
   });
   document.getElementById('slotsGrid').innerHTML=hasSlots?html:'<div style="grid-column:1/-1;text-align:center;padding:28px;color:var(--gray);font-size:13px;">No hay horarios disponibles para este día.</div>';
-  setTimeout(function(){goTo(2);},180);
+  setTimeout(function(){goTo(2);},150);
 }
 
-function selectTime(rawTime,display,ampm) {
+function selectTime(rawTime,display,ampm){
   S.selTime=rawTime;
   document.querySelectorAll('.slot:not(.taken)').forEach(function(s){s.classList.remove('sel');});
   event.currentTarget.classList.add('sel');
@@ -473,51 +433,48 @@ function selectTime(rawTime,display,ampm) {
   var dow=new Date(parseInt(parts[0]),m-1,d).getDay();
   document.getElementById('sumDate').textContent=DAYS_FULL[dow]+', '+d+' de '+MONTHS_ES[m-1];
   document.getElementById('sumTime').textContent=display+' '+ampm;
-  setTimeout(function(){goTo(3);},180);
+  setTimeout(function(){goTo(3);},150);
 }
 
 // ── GUARDAR CITA ─────────────────────────────────
-function submitBooking() {
-  var name  = document.getElementById('fName').value.trim();
-  var phone = document.getElementById('fPhone').value.trim();
-  var type  = document.getElementById('fType').value;
-  var notes = document.getElementById('fNotes').value.trim();
-  var err   = document.getElementById('formErr');
-
+async function submitBooking() {
+  var name=document.getElementById('fName').value.trim();
+  var phone=document.getElementById('fPhone').value.trim();
+  var type=document.getElementById('fType').value;
+  var notes=document.getElementById('fNotes').value.trim();
+  var err=document.getElementById('formErr');
   if(!name||!phone){err.textContent='Por favor completa nombre y WhatsApp.';err.style.display='block';return;}
   err.style.display='none';
-
-  // Verificar disponibilidad una vez más
-  var current = buildBusyMap();
-  var busyNow = current[S.selDate]||[];
-  if(busyNow.indexOf(S.selTime)!==-1) {
-    goTo(4);
-    document.getElementById('loadingView').style.display='none';
-    document.getElementById('errorView').style.display='block';
-    return;
-  }
 
   var btn=document.getElementById('confirmBtn');
   btn.disabled=true; btn.textContent='GUARDANDO…';
   goTo(4);
 
-  // Guardar cita
-  var appts = getAppointments();
-  var newAppt = {
+  // Verificar disponibilidad en tiempo real
+  var appts=await getAppointments();
+  var conflict=appts.some(function(a){return a.date===S.selDate&&a.time===S.selTime;});
+  if(conflict){
+    document.getElementById('loadingView').style.display='none';
+    document.getElementById('errorView').style.display='block';
+    btn.disabled=false; btn.textContent='CONFIRMAR CITA →';
+    return;
+  }
+
+  var newAppt={
     id: Date.now(),
     date: S.selDate,
     time: S.selTime,
-    name: name,
-    phone: phone,
-    type: type,
-    notes: notes,
+    name: name, phone: phone, type: type, notes: notes,
     createdAt: new Date().toISOString()
   };
   appts.push(newAppt);
-  saveAppointments(appts);
+  await saveAppointments(appts);
 
-  // Mostrar éxito
-  setTimeout(function() {
+  // Actualizar busyMap local
+  if(!S.busyMap[S.selDate]) S.busyMap[S.selDate]=[];
+  S.busyMap[S.selDate].push(S.selTime);
+
+  setTimeout(function(){
     document.getElementById('loadingView').style.display='none';
     document.getElementById('cName').textContent=name;
     document.getElementById('cDate').textContent=document.getElementById('sumDate').textContent;
@@ -525,62 +482,46 @@ function submitBooking() {
     document.getElementById('cType').textContent=type;
     document.getElementById('successView').style.display='block';
     btn.disabled=false; btn.textContent='CONFIRMAR CITA →';
-  }, 800);
+  }, 600);
 }
 
-function resetBooking() {
+function resetBooking(){
   S.selDate=null; S.selTime=null;
   ['fName','fPhone','fNotes'].forEach(function(id){document.getElementById(id).value='';});
   document.getElementById('successView').style.display='none';
   document.getElementById('loadingView').style.display='block';
-  renderCalendar();
-  goTo(1);
+  renderCalendar(); goTo(1);
 }
 
 // ── ADMIN DASHBOARD ──────────────────────────────
-var currentFilter='all';
-
-function renderDashboard() {
-  var appts=getAppointments();
+async function renderDashboard(){
+  document.getElementById('apptList').innerHTML='<div style="text-align:center;padding:32px;"><div class="spinner"></div></div>';
+  var appts=await getAppointments();
   var now=new Date(); now.setHours(0,0,0,0);
-  var weekEnd=new Date(now); weekEnd.setDate(weekEnd.getDate()+7);
-
   var todayStr=dateKey(now.getFullYear(),now.getMonth()+1,now.getDate());
-  var todayCount=appts.filter(function(a){return a.date===todayStr;}).length;
-  var weekCount=appts.filter(function(a){return a.date>=todayStr&&new Date(a.date)<=weekEnd;}).length;
-
+  var weekEnd=new Date(now); weekEnd.setDate(weekEnd.getDate()+7);
   document.getElementById('statTotal').textContent=appts.length;
-  document.getElementById('statToday').textContent=todayCount;
-  document.getElementById('statWeek').textContent=weekCount;
-
+  document.getElementById('statToday').textContent=appts.filter(function(a){return a.date===todayStr;}).length;
+  document.getElementById('statWeek').textContent=appts.filter(function(a){return a.date>=todayStr&&new Date(a.date+'T00:00:00')<=weekEnd;}).length;
   filterAppts(currentFilter, document.querySelector('.filter-btn.active'));
 }
 
-function filterAppts(f, btn) {
+async function filterAppts(f,btn){
   currentFilter=f;
   document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
   if(btn) btn.classList.add('active');
-
-  var appts=getAppointments();
+  var appts=await getAppointments();
   var now=new Date(); now.setHours(0,0,0,0);
   var todayStr=dateKey(now.getFullYear(),now.getMonth()+1,now.getDate());
   var weekEnd=new Date(now); weekEnd.setDate(weekEnd.getDate()+7);
-
   var filtered=appts;
   if(f==='today') filtered=appts.filter(function(a){return a.date===todayStr;});
-  else if(f==='week') filtered=appts.filter(function(a){return a.date>=todayStr&&new Date(a.date)<=weekEnd;});
+  else if(f==='week') filtered=appts.filter(function(a){return a.date>=todayStr&&new Date(a.date+'T00:00:00')<=weekEnd;});
   else if(f==='upcoming') filtered=appts.filter(function(a){return a.date>=todayStr;});
-
-  // Ordenar por fecha y hora
   filtered.sort(function(a,b){return (a.date+a.time)<(b.date+b.time)?-1:1;});
-
   var list=document.getElementById('apptList');
-  if(!filtered.length) {
-    list.innerHTML='<div class="empty-state"><div class="es-icon">📅</div><p>No hay citas en este filtro</p></div>';
-    return;
-  }
-
-  list.innerHTML=filtered.map(function(a) {
+  if(!filtered.length){list.innerHTML='<div class="empty-state"><div class="es-icon">📅</div><p>No hay citas en este filtro</p></div>';return;}
+  list.innerHTML=filtered.map(function(a){
     var parts=a.date.split('-');
     var timeParts=a.time.split(':');
     var hr=parseInt(timeParts[0]);
@@ -588,8 +529,7 @@ function filterAppts(f, btn) {
     var h12=hr>12?hr-12:(hr===0?12:hr);
     var timeStr=String(h12).padStart(2,'0')+':'+timeParts[1]+' '+ampm;
     var mon=MONTHS_ES[parseInt(parts[1])-1].substring(0,3).toUpperCase();
-    var waLink='https://wa.me/'+a.phone.replace(/[^0-9]/g,'')+'?text='+encodeURIComponent('Hola '+a.name+'! Te confirmo tu cita del '+a.date+' a las '+timeStr+'. — Jerson Torres, Instinto Disruptivo');
-
+    var waLink='https://wa.me/'+a.phone.replace(/[^0-9]/g,'')+'?text='+encodeURIComponent('Hola '+a.name+'! Te confirmo tu cita del '+parts[2]+' de '+MONTHS_ES[parseInt(parts[1])-1]+' a las '+timeStr+'. — Jerson Torres, Instinto Disruptivo 🐆');
     return '<div class="appt-card">'
       +'<div class="appt-date"><div class="ad-day">'+parts[2]+'</div><div class="ad-mon">'+mon+'</div></div>'
       +'<div class="appt-info">'
@@ -598,20 +538,20 @@ function filterAppts(f, btn) {
       +'<div style="margin-top:6px;"><span class="appt-type">'+a.type+'</span></div>'
       +'</div>'
       +'<div class="appt-actions">'
-      +'<a href="'+waLink+'" target="_blank"><button class="act-btn act-confirm">💬 WhatsApp</button></a>'
+      +'<a href="'+waLink+'" target="_blank" class="act-btn act-confirm">💬 WhatsApp</a>'
       +'<button class="act-btn act-delete" onclick="deleteAppt('+a.id+')">🗑 Borrar</button>'
       +'</div></div>';
   }).join('');
 }
 
-function deleteAppt(id) {
+async function deleteAppt(id){
   if(!confirm('¿Eliminar esta cita?')) return;
-  var appts=getAppointments().filter(function(a){return a.id!==id;});
-  saveAppointments(appts);
+  var appts=(await getAppointments()).filter(function(a){return a.id!==id;});
+  await saveAppointments(appts);
   renderDashboard();
 }
 
-// ── INIT ─────────────────────────────────────────
+// INIT
 renderCalendar();
 </script>
 </body>
